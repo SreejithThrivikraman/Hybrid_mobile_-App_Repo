@@ -1,3 +1,5 @@
+
+// Example code for showing the use of function as arguments
 fun main() {
     printFormattedName("Sreejith", "Thrivikraman") { FirstName, SecondName ->
         SecondName + "," + FirstName
