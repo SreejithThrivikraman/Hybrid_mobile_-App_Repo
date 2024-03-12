@@ -8,8 +8,14 @@ fun main() {
 
     inputFile.forEachLine { item -> student_name.add(item)}
 
-    val sortedLines = student_name.sorted().take(2)
-    val outputFile = File("Sorted.txt").toPath()
-    outputFile.writeLines(sortedLines)
+    val sortedLines = student_name.sorted()
+    val parsedScores = sortedLines.map{
+        it -> val element = it.split(":")
+        element[0] to element[1]
+    }
 
+    val listOfStudentName = parsedScores.sortedByDescending{ it -> it.second}.take(2)
+    val outputFile = File("Sorted.txt").toPath()
+
+    outputFile.writeLines(listOfStudentName.map { "${it.first} -> ${it.second}" })
 }

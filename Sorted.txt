@@ -1,2 +1,2 @@
-Naresh : 75
-Ortego : 100
+Sreejith  ->  90
+Naresh  ->  75
