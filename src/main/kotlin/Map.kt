@@ -35,4 +35,5 @@ fun main() {
         println("Mark for ${items.key} is ${items.value}")
     }
 
+    println(student.size)
 }
